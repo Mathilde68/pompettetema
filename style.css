@@ -3,7 +3,7 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      1.3.7
+ Version:      1.4.4
 */
 
 
@@ -32,13 +32,3 @@ footer{
 color: white;
  }
 
- @media screen and (min-width: 545px) {
-  img .wp-image-131{
-      display:none;
-  }
-
-
-
-
-
-  }
