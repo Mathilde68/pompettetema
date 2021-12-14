@@ -38,6 +38,7 @@ get_header(); ?>
 	
 
 <div id=form-section>
+	<h4>💌</h4>
 <p>Fields marked with * has to be filled</p>
 <form class="sommelierform">
   <label for="email">Email*</label><br>
