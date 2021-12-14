@@ -3,7 +3,7 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      1.8.3
+ Version:      1.8.4
 */
 
 /*REMEMBER STYLE MOBILE FIRST!*/
@@ -14,6 +14,10 @@
     max-width: 1120px;
     margin: 0 auto;
     margin-bottom:50px;
+}
+
+.pageendcat{
+    max-width:60px;
 }
 
 /*font and text styling*/
@@ -52,6 +56,7 @@ footer{
 
  
  /*------forms for sommelier help----*/
+ /*letter emoji*/
  #letter{
      font-size:3rem;
      text-align: center;
@@ -62,10 +67,10 @@ footer{
      font-size: 1rem;
      color:#1e1e1e;
  }
-
+/*dividers*/
  hr.solid {
     border-top: 1px solid #0007ff73;
-    margin-top:3.5rem;
+    margin-top:3rem;
   }
   
 
@@ -106,7 +111,7 @@ footer{
  }
 
  .likert .likertradio{
-margin: 0 5px
+margin: 0 2px
  }
 
 .imgbox{
@@ -116,9 +121,6 @@ margin: 0 5px
     justify-content: center;
 }
 
-.pageendcat{
-    max-width:100px;
-}
 
 
 /*MEDIAQUERIES*/
@@ -131,6 +133,9 @@ margin: 0 5px
         margin-left:100px;
     }
 
+    .pageendcat{
+        max-width:100px;
+    }
 }
 
 /*desktop*/
@@ -141,14 +146,14 @@ margin: 0 5px
         margin-left:100px;
     }
 
+    .pageendcat{
+        max-width:100px;
+    }
+
 /*font and text*/
-label{
+    label{
     font-size: 1.2rem;
-}
-
-
-
-
+    }
 
 
 /*sommelier forms*/
@@ -157,6 +162,9 @@ label{
     }
     .likert .likertradio{
         margin: 0 10px
-         }
+    }
 
+    hr.solid {
+         margin-top:3.5rem;
+     }
 }
