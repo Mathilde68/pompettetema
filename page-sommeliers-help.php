@@ -38,7 +38,7 @@ get_header(); ?>
 	
 
 <div id=form-section>
-	<h4>💌</h4>
+	<h2 id="letter">💌</h2>
 <p>Fields marked with * has to be filled</p>
 <form class="sommelierform">
   <label for="email">Email*</label><br>
@@ -48,13 +48,13 @@ get_header(); ?>
 
   <label for="feeling">How are you feeling today?</label><br>
   <ul class="likert">
-  <li> Shabby </li>
+  <li class="underlabel"> Shabby </li>
   <li><input  type="radio" class="likertradio" name="feeling" value="1" /></li>
   <li><input type="radio" class="likertradio" name="feeling" value="2" /></li>
   <li><input type="radio" class="likertradio" name="feeling" value="3" /></li>
   <li><input type="radio" class="likertradio" name="feeling" value="4" /></li>
   <li><input type="radio" class="likertradio" name="feeling" value="5" /></li>
-  <li> Happy </li>
+  <li class="underlabel"> Happy </li>
 </ul>
 
 <hr class="solid">
@@ -66,7 +66,7 @@ get_header(); ?>
 
 <label for="direction">What kind of direction are you thinking?</label><br>
   <ul class="likert">
-  <li> Solid & Safe </li>
+  <li class="underlabel"> Solid & Safe </li>
   <li><input  type="radio" class="likertradio" name="direction" value="1" /></li>
   <li><input type="radio" class="likertradio" name="direction" value="2" /></li>
   <li><input type="radio" class="likertradio" name="direction" value="3" /></li>
@@ -77,7 +77,7 @@ get_header(); ?>
   <li><input type="radio" class="likertradio" name="direction" value="8" /></li>
   <li><input type="radio" class="likertradio" name="direction" value="9" /></li>
   <li><input type="radio" class="likertradio" name="direction" value="10" /></li>
-  <li> Wild & Crazy </li>
+  <li class="underlabel"> Wild & Crazy </li>
 </ul>
 
 <hr class="solid">
@@ -89,30 +89,32 @@ get_header(); ?>
 
 <label for="bottles">How many bottles are you looking for in total?*</label><br>
 <input type="radio" id="3" name="bottles" value="3" required >
-<label for="3">3 Bottles</label><br>
+<label for="3" class="underlabel">3 Bottles</label><br>
 <input type="radio" id="6" name="bottles" value="6">
-<label for="6">6 Bottles</label><br>
+<label for="6" class="underlabel">6 Bottles</label><br>
 <input type="radio" id="12" name="bottles" value="12">
-<label for="12">12 Bottles</label> 
+<label for="12" class="underlabel">12 Bottles</label> 
 <br>
 
 <hr class="solid">
 
 <label for="budget">What's your budget?*</label><br>
-<label class="budgetexplainer"for="budget">Keep in mind the min cost of 175kr per bottle</label><br>
+<label for="budget" class="underlabel" >Keep in mind the min cost of 175kr per bottle</label><br>
 <input type="number" id="budget" name="budget" required ><br>
 
 <hr class="solid">
 
-<input  type="submit" id="send"> <p>Thank you, an email with suggestions just for you will arrive shortly!</p>
+<input  type="submit"  class="send"> <p>Thank you! An email with wine suggestions just for you will arrive shortly!</p>
+
 
 </form>
 
-<img src="" alt="">
 
 </div>
 
-
+<div class="imgbox" >
+<img class="pageendcat" src="https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/rod-closed.png" alt="catredclosedeyes">
+</div>
 
 </section>
 

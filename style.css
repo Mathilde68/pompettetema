@@ -3,10 +3,13 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      1.6.8
+ Version:      1.8.3
 */
-/*general*/
 
+/*REMEMBER STYLE MOBILE FIRST!*/
+/*USE MEDIA QUERIES FOR TABLET AND DEKSTOP*/
+
+/*general*/
 #content-section{
     max-width: 1120px;
     margin: 0 auto;
@@ -25,7 +28,7 @@
 label{
     color:#0007ff;
     font-weight: 600;
-    font-size: 29px;
+    font-size: 1rem;
 }
 
 /*fixes a footer problem - pushes footer to bottom of page by flexbox 
@@ -45,27 +48,30 @@ footer{
          }
 /*----------------------------------------------------------------------------------------------------*/
 
- div.main-header-bar.ast-header-breadcrumb{
-     margin-left:100px;
- }
+
 
  
  /*------forms for sommelier help----*/
- 
+ #letter{
+     font-size:3rem;
+     text-align: center;
+ }
 
- label .budgetexplainer{
-     font-weight:normal;
+ .underlabel{
+     font-weight: 400;
+     font-size: 1rem;
+     color:#1e1e1e;
  }
 
  hr.solid {
-    border-top: 2px solid #0007ff;
-    margin-top:4rem;
+    border-top: 1px solid #0007ff73;
+    margin-top:3.5rem;
   }
   
 
 #form-section{
     width:100%;
-    background-color:#d2dbf7;
+    background-color:#eaeaf9;
     border-radius: 10px;
     padding:10px 30px;
 }
@@ -74,23 +80,24 @@ footer{
     border-color: #0007ff;
     border-width: 2px;
     border-radius: 5px;
-    padding-bottom: 10px;
+    margin-top:13px;
 }
 
-.sommelierform #send{
+.sommelierform .send{
     border-color: #ff0000;
-
+   
 }
 
 #form-section p{
     font-style: italic;
     color:#ff0000;
-    margin-top: 10px
+    margin-top: 10px;
+    text-align:center;
 }
 
 
 #email, #mood, #looking , #budget{
-    width:60%;
+    max-width:100%;
 }
  .likert{
      display:flex;
@@ -99,6 +106,57 @@ footer{
  }
 
  .likert .likertradio{
-margin: 0 10px
+margin: 0 5px
  }
 
+.imgbox{
+    margin: 45px auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.pageendcat{
+    max-width:100px;
+}
+
+
+/*MEDIAQUERIES*/
+
+/*Tablet*/
+@media (min-width:768px)  {
+    
+    /*general*/
+    div.main-header-bar.ast-header-breadcrumb{
+        margin-left:100px;
+    }
+
+}
+
+/*desktop*/
+@media (min-width:1025px){
+    
+    /*general*/
+    div.main-header-bar.ast-header-breadcrumb{
+        margin-left:100px;
+    }
+
+/*font and text*/
+label{
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+/*sommelier forms*/
+    #email, #mood, #looking , #budget{
+        min-width:60%;
+    }
+    .likert .likertradio{
+        margin: 0 10px
+         }
+
+}
