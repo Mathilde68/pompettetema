@@ -103,9 +103,11 @@ get_header(); ?>
 
 <hr class="solid">
 
-<input class="button" type="submit"> <p>Thank you, an email with suggestions just for you will arrive shortly!</p>
+<input  type="submit" id="send"> <p>Thank you, an email with suggestions just for you will arrive shortly!</p>
 
 </form>
+
+<img src="" alt="">
 
 </div>
 

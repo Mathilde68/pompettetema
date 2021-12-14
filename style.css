@@ -3,7 +3,7 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      1.6.3
+ Version:      1.6.7
 */
 /*general*/
 
@@ -47,10 +47,16 @@ footer{
  /*------forms for sommelier help----*/
  label{
      color:#0007ff;
+     font-weight: 600;
+ }
+
+ label .budgetexplainer{
+     font-weight:normal;
  }
 
  hr.solid {
     border-top: 2px solid #0007ff;
+    margin-top:4rem;
   }
   
 
@@ -68,9 +74,13 @@ footer{
     padding-bottom: 10px;
 }
 
+.sommelierform #send{
+    border-color: #ff0000;
+
+}
 
 
-#email input, #mood input, #looking input, #budget input{
+#email, #mood input, #looking , #budget input{
     width:100%;
 }
  .likert{
