@@ -3,12 +3,15 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      1.4.4
+ Version:      1.4.9
 */
 
 
 .page .entry-header h1.entry-title {
+    font-size: 4rem;
     font-weight: 900;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 
 /*fixes a footer problem - pushes footer to bottom of page by flexbox 
@@ -30,5 +33,12 @@ footer{
 
  .wp-block-column h4, .wp-block-column p{
 color: white;
+ }
+
+
+ /*------forms for sommerlier help----*/
+ .likert{
+     display:flex;
+     flex-direction: row;
  }
 
