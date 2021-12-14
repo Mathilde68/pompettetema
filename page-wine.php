@@ -30,7 +30,16 @@ get_header(); ?>
 		<?php astra_primary_content_top();?>
 	
 		<?php astra_content_page_loop(); ?>
-		<h1>hallo</h1>
+		<section id=content-section>	
+	
+
+	
+
+	
+		</section>
+
+
+		
 		<?php astra_primary_content_bottom(); ?>
 
 	</div><!-- #primary -->

@@ -3,13 +3,14 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      1.5.2
+ Version:      1.6.3
 */
 /*general*/
 
 #content-section{
-    max-width: 1140px;
+    max-width: 1120px;
     margin: 0 auto;
+    margin-bottom:50px;
 }
 
 /*font and text styling*/
@@ -44,12 +45,41 @@ footer{
 
  
  /*------forms for sommelier help----*/
+ label{
+     color:#0007ff;
+ }
+
+ hr.solid {
+    border-top: 2px solid #0007ff;
+  }
+  
+
+#form-section{
+    width:100%;
+    background-color:#e3e3ff;
+    border-radius: 10px;
+    padding:10px 20px;
+}
+
+.sommelierform input{
+    border-color: #0007ff;
+    border-width: 2px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+
+
+#email input, #mood input, #looking input, #budget input{
+    width:100%;
+}
  .likert{
-    float: left;
+     display:flex;
+     flex-direction: row;
     list-style-type: none;
  }
 
- .likert .feelingradio{
-padding:10px;
+ .likert .likertradio{
+margin: 0 10px
  }
 
