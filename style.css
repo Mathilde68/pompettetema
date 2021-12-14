@@ -3,7 +3,7 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      1.8.4
+ Version:      1.8.5
 */
 
 /*REMEMBER STYLE MOBILE FIRST!*/
@@ -152,7 +152,7 @@ margin: 0 2px
 
 /*font and text*/
     label{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     }
 
 
