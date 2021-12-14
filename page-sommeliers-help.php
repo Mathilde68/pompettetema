@@ -34,20 +34,23 @@ get_header(); ?>
 		<?php astra_primary_content_top(); ?>
 
 		<?php astra_content_page_loop(); ?>
-		
+<section id=content-section>	
+	
+
 <div id=form-section>
+
 <form>
   <label for="email">Email:</label><br>
   <input type="email" id="email" name="email"><br>
 
-  <label for="feeling">Last name:</label><br>
+  <label for="feeling">How are you feeling today?</label><br>
   <ul class="likert">
   <li> Shabby </li>
-  <li><input type="radio" name="feeling" value="1" /></li>
-  <li><input type="radio" name="feeling" value="2" /></li>
-  <li><input type="radio" name="feeling" value="3" /></li>
-  <li><input type="radio" name="feeling" value="4" /></li>
-  <li><input type="radio" name="feeling" value="5" /></li>
+  <li><input  type="radio" class="feelingradio" name="feeling" value="1" /></li>
+  <li><input type="radio" class="feelingradio" name="feeling" value="2" /></li>
+  <li><input type="radio" class="feelingradio" name="feeling" value="3" /></li>
+  <li><input type="radio" class="feelingradio" name="feeling" value="4" /></li>
+  <li><input type="radio" class="feelingradio" name="feeling" value="5" /></li>
   <li> Happy </li>
 </ul>
 </form>
@@ -55,6 +58,8 @@ get_header(); ?>
 </div>
 
 
+
+</section>
 
 
 

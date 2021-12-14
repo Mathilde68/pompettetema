@@ -3,9 +3,16 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      1.4.9
+ Version:      1.5.2
 */
+/*general*/
 
+#content-section{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/*font and text styling*/
 
 .page .entry-header h1.entry-title {
     font-size: 4rem;
@@ -25,20 +32,24 @@
 footer{
     margin-top: auto;
     }
+/*foooter text color*/
+    .wp-block-column h4, .wp-block-column p{
+        color: white;
+         }
 /*----------------------------------------------------------------------------------------------------*/
 
  div.main-header-bar.ast-header-breadcrumb{
      margin-left:100px;
  }
 
- .wp-block-column h4, .wp-block-column p{
-color: white;
+ 
+ /*------forms for sommelier help----*/
+ .likert{
+    float: left;
+    list-style-type: none;
  }
 
-
- /*------forms for sommerlier help----*/
- .likert{
-     display:flex;
-     flex-direction: row;
+ .likert .feelingradio{
+padding:10px;
  }
 
