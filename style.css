@@ -3,7 +3,7 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      1.8.5
+ Version:      2.0.4
 */
 
 /*REMEMBER STYLE MOBILE FIRST!*/
@@ -12,12 +12,27 @@
 /*general*/
 #content-section{
     max-width: 1120px;
-    margin: 0 auto;
+    margin: 10px auto;
     margin-bottom:50px;
 }
-
+/*strørrelse på kat illusttration i bunden af siden*/
 .pageendcat{
     max-width:60px;
+}
+
+/*fikser forside alignment*/
+.site-content .ast-container {
+    display: block;
+}
+
+#primary{
+    width:100%;
+    margin:0 auto;
+}
+
+/*fjerner border kant*/
+.ast-right-sidebar #primary {
+    border-right: none;
 }
 
 /*font and text styling*/
@@ -93,6 +108,24 @@ footer{
    
 }
 
+#wpforms-submit-440{
+    border-color: #ff0000;
+    color:#ff0000;
+    border-radius:  5px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#wpforms-submit-440:hover{
+    border-color: #ff0000;
+    color:white;
+    background-color: #ff0000;
+    border-radius:  5px;
+ 
+}
+
+
 #form-section p{
     font-style: italic;
     color:#ff0000;
@@ -167,4 +200,11 @@ margin: 0 2px
     hr.solid {
          margin-top:3.5rem;
      }
+
+     /*pink box på forsiden*/
+     #pinkbox1{
+        display: flex;
+        flex-direction: row;
+     }
+     
 }
