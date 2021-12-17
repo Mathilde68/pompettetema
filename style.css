@@ -3,7 +3,7 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      2.0.7
+ Version:      2.3.9
 */
 
 /*REMEMBER STYLE MOBILE FIRST!*/
@@ -78,7 +78,7 @@ footer{
      color:#1e1e1e;
  }
 /*dividers*/
- hr.solid {
+    hr.solid {
     border-top: 1px solid #0007ff73;
     margin-top:3rem;
   }
@@ -149,6 +149,166 @@ margin: 0 2px
     max-width:60px;
 }
 
+/*---------------------------------------------------------wine page----------------------------*/
+/*filter section*/
+.wrapper{
+    display:flex;
+    flex-direction:column;
+    max-width:900px;
+    align-content: flex-end;
+}
+#vinpåhylde{
+display:flex;
+flex-direction:row;
+justify-content: space-between;
+align-content: flex-end;
+}
+
+/*alle illustrationerne som fungerer som kanpper indsættes som bg image, med en anden version der indlæses som både hover og valgt*/
+#hylde{
+  border:2px solid #0007ff;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:20px;
+}
+.allIllustration{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/alloutline.png);
+    width: 13vw;
+    height:31vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.allIllustration:hover {
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/allfilled.png);
+    width: 13vw;
+    height:31vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.allSelect{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/allfilled.png);
+    
+}
+
+.redIllustration{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/redoutline.png);
+    width: 13vw;
+    height:31vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.redIllustration:hover {
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/redfill.png);
+    width: 13vw;
+    height:31vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+    
+}
+
+.redSelect{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/redfill.png);
+}
+
+.whiteIllustration{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/whiteoutline.png);
+    width: 13vw;
+    height:31vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.whiteIllustration:hover{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/whitefilled.png);
+    width: 13vw;
+    height:31vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.whiteSelect{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/whitefilled.png);
+}
+.roseIllustration{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/pinkoutline.png);
+   width: 13vw;
+    height:31vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.roseIllustration:hover {
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/pinkfilled.png);
+   width: 13vw;
+    height:31vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.roseSelect{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/pinkfilled.png);
+}
+
+.bubblesIllustration{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/bubbleoutline.png);
+   width: 13vw;
+    height:31vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.bubblesIllustration:hover {
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/bubblefilled.png);
+   width: 13vw;
+    height:31vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.bubblesSelect{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/bubblefilled.png);
+}
+.orangeIllustration{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/orangeoutline.png);
+   width: 13vw;
+    height:31vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.orangeIllustration:hover{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/orangefilled.png);
+   width: 13vw;
+    height:31vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.orangeSelect{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/orangefilled.png);
+}
+/*skjuler teksten fra knapperne som bruges til filtreringen*/
+#filterknap{
+    font-size: 0px;
+}
+/*block letters til overskrift*/
+#overskrift{
+    text-transform: uppercase;
+}
+#loopview{
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  row-gap: 60px;
+  column-gap: 60px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
 
 /*MEDIAQUERIES*/
 
