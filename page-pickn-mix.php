@@ -22,7 +22,7 @@ get_header(); ?>
 
 	
 
-		<section id="loopview"></section>
+		<section id="oversigt" class="loopview"></section>
 		</section>
 
 		<template>
@@ -44,7 +44,7 @@ get_header(); ?>
 	<script>
 let wines;
 //const for destinationen af indholdet af template
-const destination = document.querySelector("#loopview");
+const destination = document.querySelector("#oversigt");
 let template = document.querySelector("template");
 
 

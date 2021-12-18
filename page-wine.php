@@ -46,7 +46,7 @@ get_header(); ?>
         <h2 id="overskrift">All wines</h2>
         <hr class="bluedivider">
         <button>FILTERS</button>
-        <section id="loopview"></section>
+        <section id="vinoversigt" class="loopview"></section>
 
 
 
@@ -74,7 +74,7 @@ get_header(); ?>
 <script>
 let wines;
 //const for destinationen af indholdet af template
-const destination = document.querySelector("#loopview");
+const destination = document.querySelector("#vinoversigt");
 let template = document.querySelector("template");
 let filter = "all"
 let overskrift = document.querySelector("#overskrift");

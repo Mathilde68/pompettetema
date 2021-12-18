@@ -3,7 +3,7 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      2.4.3
+ Version:      2.4.6
 */
 
 /*REMEMBER STYLE MOBILE FIRST!*/
@@ -295,12 +295,12 @@ align-content: flex-end;
     text-transform: uppercase;
 }
 /*loop view vin oversigt - responsiv grid */
-#loopview{
+.loopview{
     display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   row-gap: 40px;
   column-gap: 60px;
-  margin: auto 15px;
+  margin: auto 25px;
   margin-bottom: 2rem;
 }
 
@@ -310,6 +310,9 @@ height: 40vh;
 object-fit: cover;
 object-position: 50% 100%;
   }
+
+  
+
 
 /*MEDIAQUERIES*/
 
