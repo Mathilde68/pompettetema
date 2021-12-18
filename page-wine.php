@@ -17,7 +17,7 @@ get_header(); ?>
     <?php astra_content_page_loop(); ?>
 
     <section id=content-section>
-
+<h1>Wine🍇</h1>
 
         <section id="filter-section">
             <div class="wrapper">
@@ -95,12 +95,12 @@ filterKnapper.forEach(knap => knap.addEventListener("click", filtrerMenu));
 
 function filtrerMenu() {
     let selectclass = this.textContent + "Select";
+    
 
     console.log(selectclass);
 
     
-     //fjerner og tilføjer den pågældende select  class til den rigtige knap
-    //document.querySelector("#filterknap").classList.remove('allSelect', 'redSelect', 'whiteSelect','orangeSelect', 'bubblesSelect', 'roseSelect');
+     //fjerner og tilføjer den pågældende select  class til den rigtige knap 
     if (filter == "all"){
         document.querySelector(".allSelect").classList.remove('allSelect');
     } else if(filter == "4"){
@@ -124,7 +124,7 @@ function filtrerMenu() {
     //ændrer overskriften
     overskrift.textContent = this.textContent + " Wines";
   
-   // document.querySelector("#filterknap").classList.remove('allSelect', 'redSelect', 'whiteSelect','orangeSelect', 'bubblesSelect', 'roseSelect');
+  
   
     this.classList.add(selectclass);
 

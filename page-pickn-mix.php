@@ -22,15 +22,64 @@ get_header(); ?>
 
 	
 
-	
+		<section id="loopview"></section>
 		</section>
 
-
+		<template>
+        <article class="theWine">
+            <img src="" alt="">
+            <h4 class="name"></h4>
+            <p class="shortDescription"></p>
+            <div>
+                <p class="price"></p>
+                <button class="seMore">See more</button>
+            </div>
+        </article>
+    </template>
 		
 		<?php astra_primary_content_bottom(); ?>
 
 	</div><!-- #primary -->
 
+	<script>
+let wines;
+//const for destinationen af indholdet af template
+const destination = document.querySelector("#loopview");
+let template = document.querySelector("template");
 
+
+
+
+//url til wp  db 
+const url = "https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-json/wp/v2/wine?categories=11";
+// asynkron function som afventer og indhenter json data fra restdb
+async function hentData() {
+    const jsonData = await fetch(url);
+    wines = await jsonData.json();
+    visWine();
+}
+
+
+function visWine() {
+    console.log(wines);
+   
+    //for each loop looper igennem alle kurserne i json
+    wines.forEach(wine => {
+
+
+            const klon = template.cloneNode(true).content;
+            klon.querySelector(".name").textContent = wine.navn;
+            klon.querySelector("img").src = wine.billede.guid;
+            klon.querySelector(".shortDescription").textContent = wine.langbeskrivelse;
+            klon.querySelector(".price").textContent = wine.price;
+            klon.querySelector(".seMore").addEventListener("click", () => location.href = wine.link);
+
+            destination.appendChild(klon);
+        
+    });
+}
+
+hentData();
+</script>
 
 <?php get_footer(); ?>
