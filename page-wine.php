@@ -55,10 +55,13 @@ get_header(); ?>
 
     <template>
         <article class="theWine">
-            <img src="" alt="">
-            <h4 class="name"></h4>
-            <p class="shortDescription"></p>
-            <div>
+           <img src="" alt="">
+            <h5 class="name"></h5>
+            <div class="infodiv">
+            <p class="type"></p>
+            <p class="origin"></p>
+            </div>
+            <div class="prisogknap">
                 <p class="price"></p>
                 <button class="seMore">See more</button>
             </div>
@@ -87,7 +90,7 @@ const url = "https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-json/wp/v2/wine?
 async function hentData() {
     const jsonData = await fetch(url);
     wines = await jsonData.json();
-    visWine();
+    visVine();
 }
 
 const filterKnapper = document.querySelectorAll("#filterknap");
@@ -129,15 +132,15 @@ function filtrerMenu() {
     this.classList.add(selectclass);
 
     //kalder function vis kurser efter det nye filter er sat
-    visWine();
+    visVine();
 
     //scroller ned til indholdet efter tryk
-    document.querySelector("#loopview").scrollIntoView({
+    document.querySelector(".loopview").scrollIntoView({
         behavior: 'smooth'
     });
 }
 
-function visWine() {
+function visVine() {
     console.log(wines);
     // rydder indholdet af sektionen så der er plads til KUN det nye indhold (efter filtrering)
     destination.textContent = "";
@@ -148,8 +151,9 @@ function visWine() {
             const klon = template.cloneNode(true).content;
             klon.querySelector(".name").textContent = wine.navn;
             klon.querySelector("img").src = wine.billede.guid;
-            klon.querySelector(".shortDescription").textContent = wine.langbeskrivelse;
-            klon.querySelector(".price").textContent = wine.price;
+            klon.querySelector(".type").textContent += wine.winetype + " - " + wine.grape;
+            klon.querySelector(".origin").textContent += wine.region + " - " + wine.country;
+            klon.querySelector(".price").textContent = wine.price + " kr";
             klon.querySelector(".seMore").addEventListener("click", () => location.href = wine.link);
 
             destination.appendChild(klon);

@@ -29,15 +29,15 @@ get_header(); ?>
 	</section>
 
 	<template>
-	<article class="theWine">
-		<img src="" alt="">
-		<h4 class="name"></h4>
-		<div>
-			<p class="price"></p>
-			<button class="seMore">See more</button>
-		</div>
-	</article>
-</template>
+        <article class="theWine">
+           <img src="" alt="">
+            <h5 class="name"></h5>
+            <div class="prisogknap">
+                <p class="price"></p>
+                <button class="seMore">See more</button>
+            </div>
+        </article>
+    </template>
 	
 	<?php astra_primary_content_bottom(); ?>
 
@@ -78,7 +78,7 @@ merches.forEach(merch => {
 		const klon = template.cloneNode(true).content;
 		klon.querySelector(".name").textContent = merch.navn;
 		klon.querySelector("img").src = merch.billede.guid;
-		klon.querySelector(".price").textContent = merch.price;
+		klon.querySelector(".price").textContent = merch.price + " kr";
 		klon.querySelector(".seMore").addEventListener("click", () => location.href = merch.link);
 
 		destination1.appendChild(klon);
@@ -89,7 +89,7 @@ giftcards.forEach(giftcard => {
 		const klon = template.cloneNode(true).content;
 		klon.querySelector(".name").textContent = giftcard.navn;
 		klon.querySelector("img").src = giftcard.billede.guid;
-		klon.querySelector(".price").textContent = giftcard.price;
+		klon.querySelector(".price").textContent = "min/max: " + giftcard.price + " kr";
 		klon.querySelector(".seMore").addEventListener("click", () => location.href = giftcard.link);
 
 		destination2.appendChild(klon);

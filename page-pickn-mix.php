@@ -25,12 +25,15 @@ get_header(); ?>
 		<section id="oversigt" class="loopview"></section>
 		</section>
 
-		<template>
+        <template>
         <article class="theWine">
-            <img src="" alt="">
-            <h4 class="name"></h4>
-            <p class="shortDescription"></p>
-            <div>
+           <img src="" alt="">
+            <h5 class="name"></h5>
+            <div class="infodiv">
+            <p class="type"></p>
+            <p class="origin"></p>
+            </div>
+            <div class="prisogknap">
                 <p class="price"></p>
                 <button class="seMore">See more</button>
             </div>
@@ -70,8 +73,9 @@ function visWine() {
             const klon = template.cloneNode(true).content;
             klon.querySelector(".name").textContent = wine.navn;
             klon.querySelector("img").src = wine.billede.guid;
-            klon.querySelector(".shortDescription").textContent = wine.langbeskrivelse;
-            klon.querySelector(".price").textContent = wine.price;
+            klon.querySelector(".type").textContent += wine.winetype + " - " + wine.grape;
+            klon.querySelector(".origin").textContent += wine.region + " - " + wine.country;
+            klon.querySelector(".price").textContent = wine.price + " kr";
             klon.querySelector(".seMore").addEventListener("click", () => location.href = wine.link);
 
             destination.appendChild(klon);

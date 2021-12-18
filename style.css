@@ -3,7 +3,7 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      2.4.6
+ Version:      2.6.0
 */
 
 /*REMEMBER STYLE MOBILE FIRST!*/
@@ -43,7 +43,7 @@ label{
     font-size: 1rem;
 }
 
-/*fixes a footer problem - pushes footer to bottom of page by flexbox 
+/*fixes a footer problem - pushes footer to bottom of page by flex 
      for more info: https://dev.to/nehalahmadkhan/how-to-make-footer-stick-to-bottom-of-web-page-3i14 */
 #page{
     min-height: 97vh;
@@ -294,7 +294,7 @@ align-content: flex-end;
 #overskrift{
     text-transform: uppercase;
 }
-/*loop view vin oversigt - responsiv grid */
+/*loop view oversigt - responsiv grid */
 .loopview{
     display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -303,7 +303,11 @@ align-content: flex-end;
   margin: auto 25px;
   margin-bottom: 2rem;
 }
-
+.theWine{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .theWine img {
 width: 100vw;
 height: 40vh;
@@ -311,8 +315,36 @@ object-fit: cover;
 object-position: 50% 100%;
   }
 
-  
+  .prisogknap{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+  }
 
+.theWine p{
+    color:#ff0000;
+    margin-bottom:0px;
+}
+
+.infodiv{
+    margin-bottom:1em;
+}
+  .prisogknap .price{
+    color:#ff0000;
+    font-weight: 600;
+    font-size:1.3rem;
+}
+
+  .theWine .name{
+      color: #1e1e1e;
+      font-weight: 700;
+  }
+
+  /*------------------single-----------------*/
+  .nav-links{
+    display:none;
+  }
 
 /*MEDIAQUERIES*/
 
