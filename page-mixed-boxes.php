@@ -22,7 +22,7 @@ get_header(); ?>
 
 
 
-        <section id="oversigt" class="loopview"></section>
+        <section id="boxoversigt" class="loopview"></section>
     </section>
 
     <template>
@@ -34,6 +34,7 @@ get_header(); ?>
                 <p class="price"></p>
                 <button class="seMore">See more</button>
             </div>
+			<hr class="solidred">
         </article>
     </template>
 
@@ -43,37 +44,36 @@ get_header(); ?>
 
 
 <script>
-let mixedboxes;
+let boxes;
 //const for destinationen af indholdet af template
-const destination = document.querySelector("#oversigt");
+const destination = document.querySelector("#boxoversigt");
 let template = document.querySelector("template");
 
 
 
 
 //url til wp  db 
-const url = "https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-json/wp/v2/mixed_box";
+const url = "https://xn--mflingo-q1a.dk/kea/pompettesite/wp-json/wp/v2/boxes";
 // asynkron function som afventer og indhenter json data fra restdb
 async function hentData() {
     const jsonData = await fetch(url);
-    mixedboxes = await jsonData.json();
+    boxes = await jsonData.json();
     visBoxes();
 }
 
 
 function visBoxes() {
-    console.log(mixedboxes);
+    console.log(boxes);
 
     //for each loop looper igennem alle kurserne i json
-    mixedboxes.forEach(mixedbox => {
+    boxes.forEach(box => {
 
 
         const klon = template.cloneNode(true).content;
-        klon.querySelector(".name").textContent = mixedbox.navn;
-        klon.querySelector("img").src = mixedbox.billede.guid;
-        klon.querySelector(".description").textContent = mixedbox.langbeskrivelse;
-        klon.querySelector(".price").textContent = mixedbox.price + " kr";
-        klon.querySelector(".seMore").addEventListener("click", () => location.href = mixedbox.link);
+        klon.querySelector(".name").textContent = box.navn;
+        klon.querySelector("img").src = box.billede.guid;
+        klon.querySelector(".price").textContent = box.price + " kr";
+        klon.querySelector(".seMore").addEventListener("click", () => location.href = box.link);
 
         destination.appendChild(klon);
 

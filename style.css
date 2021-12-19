@@ -3,13 +3,17 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      2.6.0
+ Version:      3.1.4
 */
 
 /*REMEMBER STYLE MOBILE FIRST!*/
 /*USE MEDIA QUERIES FOR TABLET AND DEKSTOP*/
 
 /*general*/
+
+.hidden{
+    display:none;
+}
 
 /*max-width for the content section on our pages*/
 #content-section{
@@ -36,6 +40,16 @@
     border-right: none;
 }
 
+/*dividers*/
+hr.solidblue {
+    border-top: 2px solid #0008ff;
+    margin-top:1rem;
+  }
+
+  hr.solidred {
+    border-top: 2px solid #ff0000;
+    margin-top:1rem;
+  }
 /*font and text styling*/
 label{
     color:#0007ff;
@@ -72,9 +86,10 @@ footer{
      font-size: 1rem;
      color:#1e1e1e;
  }
-/*dividers*/
-    hr.solid {
-    border-top: 1px solid #0007ff73;
+
+
+  .sommelierform hr.solidblue {
+    border-top: 1px solid #0008ff80;
     margin-top:3rem;
   }
   
@@ -135,7 +150,10 @@ footer{
  .likert .likertradio{
 margin: 0 2px
  }
-
+.catbox{
+display: flex;
+justify-content: center;
+}
 
 /*strørelse på kat illusttration i bunden af siden*/
 .pageendcat{
@@ -172,6 +190,8 @@ align-content: flex-end;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: bottom;
+    cursor:pointer;
+
 }
 
 .allIllustration:hover {
@@ -194,6 +214,8 @@ align-content: flex-end;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: bottom;
+    cursor:pointer;
+
 }
 
 .redIllustration:hover {
@@ -216,6 +238,8 @@ align-content: flex-end;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: bottom;
+    cursor:pointer;
+
 }
 
 .whiteIllustration:hover{
@@ -236,6 +260,8 @@ align-content: flex-end;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: bottom;
+    cursor:pointer;
+
 }
 .roseIllustration:hover {
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/pinkfilled.png);
@@ -256,6 +282,8 @@ align-content: flex-end;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: bottom;
+    cursor:pointer;
+
 }
 .bubblesIllustration:hover {
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/bubblefilled.png);
@@ -275,6 +303,8 @@ align-content: flex-end;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: bottom;
+    cursor:pointer;
+
 }
 .orangeIllustration:hover{
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/orangefilled.png);
@@ -300,7 +330,7 @@ align-content: flex-end;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   row-gap: 40px;
   column-gap: 60px;
-  margin: auto 25px;
+  margin:25px;
   margin-bottom: 2rem;
 }
 .theWine{
@@ -330,10 +360,11 @@ object-position: 50% 100%;
 .infodiv{
     margin-bottom:1em;
 }
-  .prisogknap .price{
+  .price{
     color:#ff0000;
     font-weight: 600;
-    font-size:1.3rem;
+    font-size:1.2rem;
+    min-width: max-content;
 }
 
   .theWine .name{
@@ -341,9 +372,143 @@ object-position: 50% 100%;
       font-weight: 700;
   }
 
+  /*mixed box*/
+
+  #boxoversigt article h5{
+      margin-bottom: 2rem;
+  }
+
+
+  /*to top*/
+
+  #totop-section{
+    display: flex;
+    justify-content: flex-end;
+    margin:2rem;
+   
+  }
+
+  #gotop{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/gotop.svg);
+    width: 54px;
+    height: 50px;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+
   /*------------------single-----------------*/
-  .nav-links{
+  #goback-section{
+    display: flex;
+    width: 90%;
+    justify-content: flex-start;
+  }
+
+  #goback{
+    background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/goback.svg);
+    width: 48px;
+    height: 47px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  /*gemmer title og post knapper indbygget i tematet*/
+  .single .post-navigation, .ast-single-post .entry-title {
     display:none;
+  }
+
+  /*---------first section-----*/
+  #first-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    max-width: 1000px;
+    column-gap: 60px;
+    margin: 5px;
+  }
+
+  .col1{
+      margin: 0 40px;
+  }
+
+.col2{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin:20px 5px 0px 5px;
+}
+  .singleImg{
+      width:100%;
+      box-shadow: 18px 12px 0px 2px #ff0000;
+  }
+
+  .infopris{
+      display:flex;
+      justify-content: space-between;
+  }
+
+  #minusbutton{
+      border-radius: 10px 0px 0px 10px;
+  }
+
+  
+  #plusbutton{
+    border-radius: 0px 10px 10px 0px;
+}
+
+  .quantitybuttons{
+      display:flex;
+      flex-direction: row;
+  }
+  #quantity{
+      width:40px;
+      border-top: 2px solid #ff0000;
+      border-bottom: 2px solid #ff0000;
+      text-align: center;
+      padding-top: 4px;
+      color:#ff0000;
+
+  }
+
+  .buybuttons{
+      display:flex;
+      flex-direction: column;
+      row-gap:10px;
+      column-gap:10px;
+      margin-top:10px;
+
+  }
+
+  .price-select-container{
+      display:flex;
+      flex-direction: column;
+      width:30%
+  }
+
+
+
+  /*---------second section-------*/
+
+  #second-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    max-width: 1000px;
+    column-gap: 100px;
+    margin: 40px 10px;
+    
+  }
+
+  .imgcol{
+    display:none;
+  }
+
+
+
+  
+  .beskrivelse{
+      color:#ff0000;
+      text-transform:uppercase;
+      font-weight: 600;
   }
 
 /*MEDIAQUERIES*/
@@ -359,6 +524,34 @@ object-position: 50% 100%;
     .pageendcat{
         max-width:100px;
     }
+/*singleview*/
+    .buttons{
+        display:flex;
+        flex-direction:row;
+        align-items: flex-end;
+    justify-content: space-between;
+    }
+  
+    .buybuttons{
+        flex-direction: row;
+    }
+
+
+    .infopris{
+        margin-bottom:3rem;
+    }
+
+    .imgcol{
+        display:block;
+        padding: 0 70px;
+    }
+    .infocol{
+        margin:20px;
+    }
+}
+
+.hidden{
+    display:none;
 }
 
 /*desktop*/
@@ -387,14 +580,34 @@ object-position: 50% 100%;
         margin: 0 10px
     }
 
-    hr.solid {
+   .sommelierform hr.solid {
          margin-top:3.5rem;
      }
 
-     /*pink box på forsiden*/
-     #pinkbox1{
-        display: flex;
+
+     /*singleview*/
+    .buttons{
+        display:flex;
+        flex-direction:row;
+        align-items: flex-end;
+    justify-content: space-between;
+    }
+  
+    .buybuttons{
         flex-direction: row;
+        row-gap: 10px;
+    }
+    .infopris{
+        margin-bottom:6rem;
+    } 
+
+    .imgcol{
+        display:block;
+        padding: 0 70px;
      }
-     
+
+   
+     .infocol{
+            margin:20px;
+     }
 }

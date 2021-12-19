@@ -24,11 +24,11 @@ get_header(); ?>
 
                 <div id="vinpåhylde">
                     <div id="filterknap" data-kategori="all" class="allIllustration allSelect">all</div>
-                    <div id="filterknap" data-kategori="4" class="redIllustration">red</div>
-                    <div id="filterknap" data-kategori="5" class="whiteIllustration">white</div>
-                    <div id="filterknap" data-kategori="8" class="roseIllustration">rose</div>
-                    <div id="filterknap" data-kategori="6" class="bubblesIllustration">bubbles</div>
-                    <div id="filterknap" data-kategori="7" class="orangeIllustration">orange</div>
+                    <div id="filterknap" data-kategori="Red Wine" class="redIllustration">red</div>
+                    <div id="filterknap" data-kategori="White Wine" class="whiteIllustration">white</div>
+                    <div id="filterknap" data-kategori="Rosé Wine" class="roseIllustration">rose</div>
+                    <div id="filterknap" data-kategori="Sparkling Wine" class="bubblesIllustration">bubbles</div>
+                    <div id="filterknap" data-kategori="Orange Wine" class="orangeIllustration">orange</div>
                 </div>
 
                 <div id="hylde">
@@ -44,14 +44,17 @@ get_header(); ?>
         </section>
 
         <h2 id="overskrift">All wines</h2>
-        <hr class="bluedivider">
+        <hr class="solidblue">
         <button>FILTERS</button>
         <section id="vinoversigt" class="loopview"></section>
 
 
-
     </section>
     <!----content section--->
+
+    <section id="totop-section">
+    <div id="gotop"></div>
+    </section>
 
     <template>
         <article class="theWine">
@@ -65,6 +68,7 @@ get_header(); ?>
                 <p class="price"></p>
                 <button class="seMore">See more</button>
             </div>
+            <hr class="solidred"> 
         </article>
     </template>
 
@@ -98,38 +102,34 @@ filterKnapper.forEach(knap => knap.addEventListener("click", filtrerMenu));
 
 function filtrerMenu() {
     let selectclass = this.textContent + "Select";
-    
-
     console.log(selectclass);
 
+     //ændrer overskriften
+     overskrift.textContent = this.textContent + " Wines";
     
      //fjerner og tilføjer den pågældende select  class til den rigtige knap 
     if (filter == "all"){
         document.querySelector(".allSelect").classList.remove('allSelect');
-    } else if(filter == "4"){
+    } else if(filter == "Red Wine"){
         document.querySelector(".redSelect").classList.remove('redSelect');
-    } else if(filter == "5"){
+    } else if(filter == "White Wine"){
         document.querySelector(".whiteSelect").classList.remove('whiteSelect');
     }
-    else if(filter == "8"){
+    else if(filter == "Rosé Wine"){
         document.querySelector(".roseSelect").classList.remove('roseSelect');
     }
-    else if(filter == "6"){
+    else if(filter == "Sparkling Wine"){
         document.querySelector(".bubblesSelect").classList.remove('bubblesSelect');
     }
-    else if(filter == "7"){
+    else if(filter == "Orange Wine"){
         document.querySelector(".orangeSelect").classList.remove('orangeSelect');
     }
+    this.classList.add(selectclass);
 
     //sætter filters værdi lig med værdien fra data af den knap der førte ind i funktionen
     filter = this.dataset.kategori;
 
-    //ændrer overskriften
-    overskrift.textContent = this.textContent + " Wines";
-  
-  
-  
-    this.classList.add(selectclass);
+   
 
     //kalder function vis kurser efter det nye filter er sat
     visVine();
@@ -140,13 +140,15 @@ function filtrerMenu() {
     });
 }
 
+
+
 function visVine() {
     console.log(wines);
     // rydder indholdet af sektionen så der er plads til KUN det nye indhold (efter filtrering)
     destination.textContent = "";
     //for each loop looper igennem alle kurserne i json
     wines.forEach(wine => {
-        if (filter == wine.categories || filter == "all") {
+        if (filter == wine.winetype || filter == "all") {
 
             const klon = template.cloneNode(true).content;
             klon.querySelector(".name").textContent = wine.navn;
@@ -158,6 +160,16 @@ function visVine() {
 
             destination.appendChild(klon);
         }
+    });
+}
+
+//click eventlistener og function der scroller fra "til toppen" knap i bunden - til toppen af siden.
+document.querySelector("#gotop").addEventListener("click", scrollUp);
+
+function scrollUp() {
+    console.log("i work");
+    document.querySelector("#primary").scrollIntoView({
+        behavior: 'smooth'
     });
 }
 

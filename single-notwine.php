@@ -41,9 +41,14 @@ get_header(); ?>
                 <div class="infopris">
                     <p class="shortinfo"></p>
                     <p class="price"></p>
+                   
                 </div>
                 <div class="buttons">
-                    <div class="quantitybuttons">
+                 <div class="price-select-container">
+                        <label for="price-select">Amount:</label>
+                        <input id= price-select type="number">
+                    </div>
+                    <div class="quantitybuttons hidden">
                         <button id="minusbutton">-</button>
                         <div id="quantity">1</div>
                         <button id="plusbutton">+</button>
@@ -59,21 +64,12 @@ get_header(); ?>
 
         <section id="second-section">
             <div class="imgcol">
-                <img id="catimg"
-                    src=""
+                <img id="boximg"
+                    src="https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/bla-orange.png"
                     alt="">
             </div>
 
             <div class="infocol">
-                <ul class="infolist">
-                    <li class="vintage">Vintage: </li>
-                    <li class="grape">Grapes: </li>
-                    <li class="region">Region: </li>
-                    <li class="country">Country: </li>
-                    <li class="type">Type: </li>
-                    <li class="colour">Colour: </li>
-                    <li class="size">Size: </li>
-                </ul>
 
                 <p class="beskrivelse"></p>
 
@@ -95,15 +91,15 @@ get_header(); ?>
 
 
 <script>
-let wine;
+let notwine;
 // db url, med + indhenter Id for den påklikkede vin
-const dbUrl = "https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-json/wp/v2/wine/" + <?php echo get_the_ID() ?>;
+const dbUrl = "https://xn--mflingo-q1a.dk/kea/pompettesite/wp-json/wp/v2/notwine/" + <?php echo get_the_ID() ?>;
 
 // asynkron function, fetcher vores data som json
 async function hentData() {
     const data = await fetch(dbUrl);
-    wine = await data.json();
-    visVin();
+    notwine = await data.json();
+    visNotWines();
 }
 
 //variables store current value og new value til quantity button
@@ -136,33 +132,26 @@ function increment() {
     document.querySelector("#quantity").textContent = newVal;
 }
 
-function visVin() {
-    document.querySelector(".singleImg").src = wine.billede.guid;
-    document.querySelector(".navn").textContent = wine.navn;
-    document.querySelector(".price").textContent = wine.price + " kr";
-    document.querySelector(".shortinfo").textContent = wine.winetype + " - " + wine.grape + " - " + wine.country;
-    document.querySelector(".vintage").textContent += wine.vintage;
-    document.querySelector(".grape").textContent += wine.grape;
-    document.querySelector(".region").textContent += wine.region;
-    document.querySelector(".country").textContent += wine.country;
-    document.querySelector(".type").textContent += wine.winetype;
-    document.querySelector(".colour").textContent += wine.colour;
-    document.querySelector(".size").textContent += wine.size;
-    document.querySelector(".beskrivelse").textContent = wine.langbeskrivelse;
 
-    if (wine.winetype == "White Wine") {
-        document.querySelector("#catimg").src = "https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/blahvid.png";
-    } else if (wine.winetype == "Orange Wine") {
-        document.querySelector("#catimg").src ="https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/rod-orange2.png";
-    } else if (wine.winetype == "Rosé Wine") {
-        document.querySelector("#catimg").src ="https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/bla-pink.png"
-    } else if (wine.winetype == "Sparkling Wine") {
-        document.querySelector("#catimg").src ="https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/rodsparkling.png"
-    }else{
-		document.querySelector("#catimg").src ="https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/sortrodvin.png"
-	}
+
+function visNotWines() {
+    document.querySelector(".singleImg").src = notwine.billede.guid;
+    document.querySelector(".navn").textContent = notwine.navn;
+    document.querySelector(".price").textContent = notwine.price + " kr";
+    document.querySelector(".beskrivelse").textContent = notwine.langbeskrivelse;
+
+   console.log(notwine.categories);
 
 	document.querySelector("#goback").addEventListener("click", tilbage);
+
+    if(notwine.categories == 10){
+        document.querySelector(".quantitybuttons").classList.add("hidden");
+      
+
+    }else{
+        document.querySelector(".price-select-container").classList.add("hidden");
+        document.querySelector(".quantitybuttons").classList.remove("hidden");
+    }
 }
 
 function tilbage() {

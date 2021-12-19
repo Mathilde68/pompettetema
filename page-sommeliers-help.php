@@ -32,7 +32,7 @@ get_header(); ?>
   <label for="email">Email*</label><br>
   <input type="email" id="email" name="email" required ><br>
 
-  <hr class="solid">
+  <hr class="solidblue">
 
   <label for="feeling">How are you feeling today?</label><br>
   <ul class="likert">
@@ -45,12 +45,12 @@ get_header(); ?>
   <li class="underlabel"> Happy </li>
 </ul>
 
-<hr class="solid">
+<hr class="solidblue">
 
 <label for="mood">What are you in the mood for?*</label><br>
 <input type="text" id="mood" name="mood" required ><br>
 
-<hr class="solid">
+<hr class="solidblue">
 
 <label for="direction">What kind of direction are you thinking?</label><br>
   <ul class="likert">
@@ -68,12 +68,12 @@ get_header(); ?>
   <li class="underlabel"> Wild & Crazy </li>
 </ul>
 
-<hr class="solid">
+<hr class="solidblue">
 
 <label for="looking">Anything in particular you are looking for?</label><br>
 <input type="text" id="looking" name="looking"><br>
 
-<hr class="solid">
+<hr class="solidblue">
 
 <label for="bottles">How many bottles are you looking for in total?*</label><br>
 <input type="radio" id="3" name="bottles" value="3" required >
@@ -84,13 +84,13 @@ get_header(); ?>
 <label for="12" class="underlabel">12 Bottles</label> 
 <br>
 
-<hr class="solid">
+<hr class="solidblue">
 
 <label for="budget">What's your budget?*</label><br>
 <label for="budget" class="underlabel" >Keep in mind the min cost of 175kr per bottle</label><br>
 <input type="number" id="budget" name="budget" required ><br>
 
-<hr class="solid">
+<hr class="solidblue">
 
 <input  type="submit"  class="send"> <p>Thank you! An email with wine suggestions just for you will arrive shortly!</p>
 
@@ -100,7 +100,7 @@ get_header(); ?>
 
 </div>
 
-<div class="imgbox" >
+<div class="catbox" >
 <img class="pageendcat" src="https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/rod-closed.png" alt="catredclosedeyes">
 </div>
 
