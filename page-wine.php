@@ -18,6 +18,7 @@ get_header(); ?>
 
     <section id=content-section>
 <h1>Wine🍇</h1>
+<p>Just select a winetype off the shelf and start browsing our selection of wines!</p>
 
         <section id="filter-section">
             <div class="wrapper">

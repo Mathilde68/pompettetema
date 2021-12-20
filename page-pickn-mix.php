@@ -25,6 +25,10 @@ get_header(); ?>
 		<section id="oversigt" class="loopview"></section>
 		</section>
 
+        <section id="totop-section">
+    <div id="gotop"></div>
+    </section>
+
         <template>
         <article class="theWine">
            <img src="" alt="">
@@ -83,7 +87,18 @@ function visWine() {
     });
 }
 
+//click eventlistener og function der scroller fra "til toppen" knap i bunden - til toppen af siden.
+document.querySelector("#gotop").addEventListener("click", scrollUp);
+
+function scrollUp() {
+    console.log("i work");
+    document.querySelector("#primary").scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
 hentData();
+
 </script>
 
 <?php get_footer(); ?>

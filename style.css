@@ -3,7 +3,8 @@
  Description:  Stylish pompette theme
  Author:       Mathilde, Katrine, Lykke
  Template:     astra
- Version:      3.1.4
+ Version:      3.4.8
+
 */
 
 /*REMEMBER STYLE MOBILE FIRST!*/
@@ -18,7 +19,7 @@
 /*max-width for the content section on our pages*/
 #content-section{
     max-width: 1000px;
-    margin: 10px auto;
+    margin: 20px 10px;
     margin-bottom:50px;
 }
 /* fjerner wordpress header title*/
@@ -42,7 +43,7 @@
 
 /*dividers*/
 hr.solidblue {
-    border-top: 2px solid #0008ff;
+    border-top: 2px solid #0007ff;
     margin-top:1rem;
   }
 
@@ -89,7 +90,7 @@ footer{
 
 
   .sommelierform hr.solidblue {
-    border-top: 1px solid #0008ff80;
+    border-top: 1px solid #0007ff80;
     margin-top:3rem;
   }
   
@@ -162,31 +163,44 @@ justify-content: center;
 
 /*---------------------------------------------------------wine page----------------------------*/
 /*filter section*/
-.wrapper{
-    display:flex;
-    flex-direction:column;
-    max-width:900px;
-    align-content: flex-end;
+#filter-section{
+margin: 25px -10px;
 }
+
 #vinpåhylde{
 display:flex;
 flex-direction:row;
+justify-items: end;
 justify-content: space-between;
-align-content: flex-end;
+height: 20vh;
+
 }
+
+
 
 /*alle illustrationerne som fungerer som kanpper indsættes som bg image, med en anden version der indlæses som både hover og valgt*/
 #hylde{
   border:2px solid #0007ff;
+  background-color: #0007ff;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    padding:20px;
+    padding: 10px;
+    align-content: center;
+    
+    
+}
+
+#hylde h5{
+color:white;
+font-weight: 600;
+padding: 0px;
+font-size: 1rem;
+text-transform: uppercase;
 }
 .allIllustration{
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/alloutlined.png);
     width: 13vw;
-    height:31vh;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -197,7 +211,6 @@ align-content: flex-end;
 .allIllustration:hover {
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/allfilled.png);
     width: 13vw;
-    height:31vh;
     background-size:contain;
     background-repeat: no-repeat;
 }
@@ -210,7 +223,6 @@ align-content: flex-end;
 .redIllustration{
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/redoutline.png);
     width: 13vw;
-    height:31vh;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -221,7 +233,6 @@ align-content: flex-end;
 .redIllustration:hover {
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/redfill.png);
     width: 13vw;
-    height:31vh;
     background-size:contain;
     background-repeat: no-repeat;
     
@@ -234,7 +245,6 @@ align-content: flex-end;
 .whiteIllustration{
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/whiteoutline.png);
     width: 13vw;
-    height:31vh;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -245,7 +255,6 @@ align-content: flex-end;
 .whiteIllustration:hover{
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/whitefilled.png);
     width: 13vw;
-    height:31vh;
     background-size:contain;
     background-repeat: no-repeat;
 }
@@ -256,7 +265,6 @@ align-content: flex-end;
 .roseIllustration{
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/pinkoutline.png);
    width: 13vw;
-    height:31vh;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -266,7 +274,6 @@ align-content: flex-end;
 .roseIllustration:hover {
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/pinkfilled.png);
    width: 13vw;
-    height:31vh;
     background-size:contain;
     background-repeat: no-repeat;
 }
@@ -278,7 +285,6 @@ align-content: flex-end;
 .bubblesIllustration{
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/bubbleoutline.png);
    width: 13vw;
-    height:31vh;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -288,7 +294,6 @@ align-content: flex-end;
 .bubblesIllustration:hover {
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/bubblefilled.png);
    width: 13vw;
-    height:31vh;
     background-size:contain;
     background-repeat: no-repeat;
 }
@@ -299,7 +304,6 @@ align-content: flex-end;
 .orangeIllustration{
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/orangeoutline.png);
    width: 13vw;
-    height:31vh;
     background-size:contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -309,7 +313,6 @@ align-content: flex-end;
 .orangeIllustration:hover{
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/orangefilled.png);
    width: 13vw;
-    height:31vh;
     background-size:contain;
     background-repeat: no-repeat;
 }
@@ -374,11 +377,30 @@ object-position: 50% 100%;
 
   /*mixed box*/
 
-  #boxoversigt article h5{
+  #boxoversigt article h5, #giftcardoversigt article h5,   #merchoversigt article h5 {
       margin-bottom: 2rem;
   }
 
 
+/*not wine*/
+#buttonsection{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 60px;
+    row-gap: 40px;
+    margin: 4rem auto;
+    align-items: center;
+    justify-items: center;
+}
+
+#buttonsection img{
+    max-width: 15rem;
+}
+
+
+.spacer{
+    margin-bottom:4rem;
+}
   /*to top*/
 
   #totop-section{
@@ -406,8 +428,8 @@ object-position: 50% 100%;
 
   #goback{
     background-image: url(https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/goback.svg);
-    width: 48px;
-    height: 47px;
+    width: 43px;
+    height: 43px;
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
@@ -419,13 +441,6 @@ object-position: 50% 100%;
   }
 
   /*---------first section-----*/
-  #first-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    max-width: 1000px;
-    column-gap: 60px;
-    margin: 5px;
-  }
 
   .col1{
       margin: 0 40px;
@@ -435,7 +450,7 @@ object-position: 50% 100%;
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin:20px 5px 0px 5px;
+    margin:40px 0;
 }
   .singleImg{
       width:100%;
@@ -502,21 +517,23 @@ object-position: 50% 100%;
     display:none;
   }
 
-
-
-  
   .beskrivelse{
-      color:#ff0000;
       text-transform:uppercase;
       font-weight: 600;
   }
 
 /*MEDIAQUERIES*/
 
+
 /*Tablet*/
 @media (min-width:768px)  {
     
     /*general*/
+
+    #content-section{
+        max-width: 1000px;
+        margin: 10px auto;}
+
     div.main-header-bar.ast-header-breadcrumb{
         margin-left:100px;
     }
@@ -524,7 +541,29 @@ object-position: 50% 100%;
     .pageendcat{
         max-width:100px;
     }
+   
+    /*wines*/
+    #vinpåhylde{
+        height:25vh;
+       margin: 0px 0px 0px 15%;
+    }
+
+    #filter-section{
+        margin: 15px auto;
+        }
+
+    #hylde{
+        padding-left: 20%;
+    }
 /*singleview*/
+
+#first-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    max-width: 1000px;
+    column-gap: 60px;
+    margin: 10px;
+  }
     .buttons{
         display:flex;
         flex-direction:row;
@@ -558,6 +597,11 @@ object-position: 50% 100%;
 @media (min-width:1025px){
     
     /*general*/
+    #content-section{
+        max-width: 1000px;
+        margin: 10px auto;
+    }
+
     div.main-header-bar.ast-header-breadcrumb{
         margin-left:100px;
     }
@@ -583,9 +627,28 @@ object-position: 50% 100%;
    .sommelierform hr.solid {
          margin-top:3.5rem;
      }
+/*wines*/
+     #vinpåhylde{
+         height:30vh;
+        margin: 0px 0px 0px 25%;
+     }
+     #filter-section{
+        margin: 15px auto;
+        }
 
-
+        #hylde{
+            padding-left: 30%;
+        }
      /*singleview*/
+
+     #first-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        max-width: 1000px;
+        column-gap: 60px;
+        margin: 10px;
+      }
+
     .buttons{
         display:flex;
         flex-direction:row;

@@ -106,7 +106,9 @@ get_header(); ?>
 
 </section>
 
-
+<section id="totop-section">
+    <div id="gotop"></div>
+    </section>
 
 		<?php astra_primary_content_bottom(); ?>
 
@@ -117,5 +119,18 @@ get_header(); ?>
 	<?php get_sidebar(); ?>
 
 <?php endif ?>
+
+<script>
+
+  //click eventlistener og function der scroller fra "til toppen" knap i bunden - til toppen af siden.
+document.querySelector("#gotop").addEventListener("click", scrollUp);
+
+function scrollUp() {
+    console.log("i work");
+    document.querySelector("#primary").scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+</script>
 
 <?php get_footer(); ?>
