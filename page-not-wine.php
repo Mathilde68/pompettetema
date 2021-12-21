@@ -19,14 +19,17 @@ get_header(); ?>
 
     <?php astra_content_page_loop(); ?>
     <section id=content-section>
-		<h1>Not wine??</h1>
-		<p>You might be sad it's not wine, but dont worry, it's fine <br> We have giftcards to give friends and fam a good surprise!<br>
-		And don't forget our selection of cool Pompette merchandise!<br>
-			Just Navigate our non-wine selections by clicking below!</p>
-<section id="buttonsection">
-	<img id="merchbutton" src="https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/merch.png" alt="">
-	<img id="giftcardbutton" src="https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/giftcards.png" alt="">
-</section>
+        <h1>Not wine??</h1>
+        <p>You might be sad it's not wine, but dont worry, it's fine <br> We have giftcards to give friends and fam a
+            good surprise!<br>
+            And don't forget our selection of cool Pompette merchandise!<br>
+            Just Navigate our non-wine selections by clicking below!</p>
+        <section id="buttonsection">
+            <img id="merchbutton"
+                src="https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/merch.png" alt="">
+            <img id="giftcardbutton"
+                src="https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/giftcards.png" alt="">
+        </section>
 
         <section id="merchsection">
             <h2>Merchandise</h2>
@@ -39,17 +42,17 @@ get_header(); ?>
             <h2>Giftcards</h2>
             <p>Gift card for future use at the shop/bar, online or at Poulette.
 
-Please be sure to buy the correct one — they unfortunately do not work interchangeably.
+                Please be sure to buy the correct one — they unfortunately do not work interchangeably.
 
-You are able to select the value once you click on the gift card you are after.</p>
+                You are able to select the value once you click on the gift card you are after.</p>
             <hr class="solidblue">
             <div id="giftcardoversigt" class="loopview"></div>
-			<hr class="solidblue spacer">
+            <hr class="solidblue spacer">
         </section>
     </section>
 
     <section id="totop-section">
-    <div id="gotop"></div>
+        <div id="gotop"></div>
     </section>
 
 
@@ -128,17 +131,20 @@ function visNotwines() {
 document.querySelector("#merchbutton").addEventListener("mouseover", hoverMerch);
 
 function hoverMerch() {
-document.querySelector("#merchbutton").src= "https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/merchhover.png"
+    document.querySelector("#merchbutton").src =
+        "https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/merchhover.png"
 
-//click eventlistener og function der scroller til merchsection
-document.querySelector("#merchbutton").addEventListener("click", scrollMerch);
-document.querySelector("#merchbutton").addEventListener("mouseout", endhoverMerch);
+    //click eventlistener og function der scroller til merchsection
+    document.querySelector("#merchbutton").addEventListener("click", scrollMerch);
+    document.querySelector("#merchbutton").addEventListener("mouseout", endhoverMerch);
 
 }
 
 function endhoverMerch() {
-document.querySelector("#merchbutton").src= "https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/merch.png"
+    document.querySelector("#merchbutton").src =
+        "https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/merch.png"
 }
+
 function scrollMerch() {
     console.log("i work");
     document.querySelector("#merchsection").scrollIntoView({
@@ -150,16 +156,18 @@ function scrollMerch() {
 document.querySelector("#giftcardbutton").addEventListener("mouseover", hoverGiftcard);
 
 function hoverGiftcard() {
-document.querySelector("#giftcardbutton").src= "https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/giftcardshover.png"
+    document.querySelector("#giftcardbutton").src =
+        "https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/giftcardshover.png"
 
-//click eventlistener og function der scroller til giftcardsection
-document.querySelector("#giftcardbutton").addEventListener("click", scrollGC);
-document.querySelector("#giftcardbutton").addEventListener("mouseout", endhoverGiftcard);
+    //click eventlistener og function der scroller til giftcardsection
+    document.querySelector("#giftcardbutton").addEventListener("click", scrollGC);
+    document.querySelector("#giftcardbutton").addEventListener("mouseout", endhoverGiftcard);
 
 }
 
 function endhoverGiftcard() {
-document.querySelector("#giftcardbutton").src= "https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/giftcards.png"
+    document.querySelector("#giftcardbutton").src =
+        "https://www.xn--mflingo-q1a.dk/kea/pompettesite/wp-content/uploads/2021/12/giftcards.png"
 }
 
 function scrollGC() {

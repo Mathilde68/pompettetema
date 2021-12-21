@@ -10,32 +10,32 @@ get_header(); ?>
 
 
 
-	<div id="primary" <?php astra_primary_class(); ?>>
+<div id="primary" <?php astra_primary_class(); ?>>
 
-	
 
-		<?php astra_primary_content_top();?>
-	
-		<?php astra_content_page_loop(); ?>
-		<section id=content-section>	
-	
 
-	
+    <?php astra_primary_content_top();?>
 
-		<section id="oversigt" class="loopview"></section>
-		</section>
+    <?php astra_content_page_loop(); ?>
+    <section id=content-section>
 
-        <section id="totop-section">
-    <div id="gotop"></div>
+
+
+
+        <section id="oversigt" class="loopview"></section>
     </section>
 
-        <template>
+    <section id="totop-section">
+        <div id="gotop"></div>
+    </section>
+
+    <template>
         <article class="theWine">
-           <img src="" alt="">
+            <img src="" alt="">
             <h5 class="name"></h5>
             <div class="infodiv">
-            <p class="type"></p>
-            <p class="origin"></p>
+                <p class="type"></p>
+                <p class="origin"></p>
             </div>
             <div class="prisogknap">
                 <p class="price"></p>
@@ -43,12 +43,12 @@ get_header(); ?>
             </div>
         </article>
     </template>
-		
-		<?php astra_primary_content_bottom(); ?>
 
-	</div><!-- #primary -->
+    <?php astra_primary_content_bottom(); ?>
 
-	<script>
+</div><!-- #primary -->
+
+<script>
 let wines;
 //const for destinationen af indholdet af template
 const destination = document.querySelector("#oversigt");
@@ -69,21 +69,21 @@ async function hentData() {
 
 function visWine() {
     console.log(wines);
-   
+
     //for each loop looper igennem alle kurserne i json
     wines.forEach(wine => {
 
 
-            const klon = template.cloneNode(true).content;
-            klon.querySelector(".name").textContent = wine.navn;
-            klon.querySelector("img").src = wine.billede.guid;
-            klon.querySelector(".type").textContent += wine.winetype + " - " + wine.grape;
-            klon.querySelector(".origin").textContent += wine.region + " - " + wine.country;
-            klon.querySelector(".price").textContent = wine.price + " kr";
-            klon.querySelector(".seMore").addEventListener("click", () => location.href = wine.link);
+        const klon = template.cloneNode(true).content;
+        klon.querySelector(".name").textContent = wine.navn;
+        klon.querySelector("img").src = wine.billede.guid;
+        klon.querySelector(".type").textContent += wine.winetype + " - " + wine.grape;
+        klon.querySelector(".origin").textContent += wine.region + " - " + wine.country;
+        klon.querySelector(".price").textContent = wine.price + " kr";
+        klon.querySelector(".seMore").addEventListener("click", () => location.href = wine.link);
 
-            destination.appendChild(klon);
-        
+        destination.appendChild(klon);
+
     });
 }
 
@@ -98,7 +98,6 @@ function scrollUp() {
 }
 
 hentData();
-
 </script>
 
 <?php get_footer(); ?>

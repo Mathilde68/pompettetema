@@ -25,12 +25,12 @@ get_header(); ?>
 
 
     <?php astra_content_loop(); ?>
-	<section id="goback-section">
-		<div id="goback"></div>
-		</section>
+    <section id="goback-section">
+        <div id="goback"></div>
+    </section>
 
     <section id="content-section">
-		
+
 
         <section id="first-section">
             <div class="col1">
@@ -41,12 +41,12 @@ get_header(); ?>
                 <div class="infopris">
                     <p class="shortinfo"></p>
                     <p class="price"></p>
-                   
+
                 </div>
                 <div class="buttons">
-                 <div class="price-select-container">
+                    <div class="price-select-container">
                         <label for="price-select">Amount:</label>
-                        <input id= price-select type="number">
+                        <input id=price-select type="number">
                     </div>
                     <div class="quantitybuttons hidden">
                         <button id="minusbutton">-</button>
@@ -140,23 +140,23 @@ function visNotWines() {
     document.querySelector(".price").textContent = notwine.price + " kr";
     document.querySelector(".beskrivelse").textContent = notwine.langbeskrivelse;
 
-   console.log(notwine.categories);
+    console.log(notwine.categories);
 
-	document.querySelector("#goback").addEventListener("click", tilbage);
+    document.querySelector("#goback").addEventListener("click", tilbage);
 
-    if(notwine.categories == 10){
+    if (notwine.categories == 10) {
         document.querySelector(".quantitybuttons").classList.add("hidden");
-      
 
-    }else{
+
+    } else {
         document.querySelector(".price-select-container").classList.add("hidden");
         document.querySelector(".quantitybuttons").classList.remove("hidden");
     }
 }
 
 function tilbage() {
-        window.history.back()
-    }
+    window.history.back()
+}
 
 hentData();
 </script>

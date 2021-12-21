@@ -17,7 +17,7 @@ get_header(); ?>
     <?php astra_content_page_loop(); ?>
 
     <section id=content-section>
-<h1>Wine🍇</h1>
+        <h1>Wine🍇</h1>
 
         <section id="filter-section">
             <div class="wrapper">
@@ -36,7 +36,7 @@ get_header(); ?>
                     <h5 class="red filtertext">red</h5>
                     <h5 class="white filtertext">white</h5>
                     <h5 class="rose filtertext">rose</h5>
-                    <h5 class="bubbles filtertext">bubbles</h5>
+                    <h5 class="sparkling filtertext">bubbles</h5>
                     <h5 class="orange filtertext">orange</h5>
                 </div>
 
@@ -53,22 +53,22 @@ get_header(); ?>
     <!----content section--->
 
     <section id="totop-section">
-    <div id="gotop"></div>
+        <div id="gotop"></div>
     </section>
 
     <template>
         <article class="theWine">
-           <img src="" alt="">
+            <img src="" alt="">
             <h5 class="name"></h5>
             <div class="infodiv">
-            <p class="type"></p>
-            <p class="origin"></p>
+                <p class="type"></p>
+                <p class="origin"></p>
             </div>
             <div class="prisogknap">
                 <p class="price"></p>
                 <button class="seMore">See more</button>
             </div>
-            <hr class="solidred"> 
+            <hr class="solidred">
         </article>
     </template>
 
@@ -101,46 +101,41 @@ const filterKnapper = document.querySelectorAll("#filterknap");
 filterKnapper.forEach(knap => knap.addEventListener("click", filtrerMenu));
 
 function filtrerMenu() {
+    // Variabel til at håndtere valgt class alt efter hvilket element der førte ind i sektionen. 
+    //Den specifikke valgt class, bruges til ændring af de enkeltede billeder i css.
     let selectclass = this.textContent + "Select";
     console.log(selectclass);
 
-     //ændrer overskriften
-     overskrift.textContent = this.textContent + " Wines";
-    
-     //fjerner og tilføjer den pågældende select  class til den rigtige knap 
-    if (filter == "all"){
-        document.querySelector(".allSelect").classList.remove('allSelect');
-    } else if(filter == "Red Wine"){
-        document.querySelector(".redSelect").classList.remove('redSelect');
-    } else if(filter == "White Wine"){
-        document.querySelector(".whiteSelect").classList.remove('whiteSelect');
-    }
-    else if(filter == "Rosé Wine"){
-        document.querySelector(".roseSelect").classList.remove('roseSelect');
-    }
-    else if(filter == "Sparkling Wine"){
-        document.querySelector(".bubblesSelect").classList.remove('bubblesSelect');
-    }
-    else if(filter == "Orange Wine"){
-        document.querySelector(".orangeSelect").classList.remove('orangeSelect');
-    }
-    this.classList.add(selectclass);
+    //ændrer overskriften
+    overskrift.textContent = this.textContent + " Wines";
 
-    //sætter filters værdi lig med værdien fra data af den knap der førte ind i funktionen
-    filter = this.dataset.kategori;
-
-   
-
-    //kalder function vis kurser efter det nye filter er sat
-    visVine();
-
-    //scroller ned til indholdet efter tryk
-    document.querySelector(".loopview").scrollIntoView({
-        behavior: 'smooth'
-    });
+    //if statements vælger den rigtige knap og fjerner den pågældende select class
+    document.querySelector(".allSelect").classList.remove('allSelect');
+} else if (filter == "Red Wine") {
+    document.querySelector(".redSelect").classList.remove('redSelect');
+} else if (filter == "White Wine") {
+    document.querySelector(".whiteSelect").classList.remove('whiteSelect');
+} else if (filter == "Rosé Wine") {
+    document.querySelector(".roseSelect").classList.remove('roseSelect');
+} else if (filter == "Sparkling Wine") {
+    document.querySelector(".bubblesSelect").classList.remove('bubblesSelect');
+} else if (filter == "Orange Wine") {
+    document.querySelector(".orangeSelect").classList.remove('orangeSelect');
 }
+//herefter tilføjes den valgt class til den knap der førte ind i funktionen
+this.classList.add(selectclass);
 
+//sætter filters værdi lig med værdien fra data af den knap der førte ind i funktionen
+filter = this.dataset.kategori;
 
+//kalder function visVine efter det nye filter er sat
+visVine();
+
+//scroller ned til loopview efter tryk
+document.querySelector(".loopview").scrollIntoView({
+    behavior: 'smooth'
+});
+}
 
 function visVine() {
     console.log(wines);

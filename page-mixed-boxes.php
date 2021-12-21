@@ -26,7 +26,7 @@ get_header(); ?>
     </section>
 
     <section id="totop-section">
-    <div id="gotop"></div>
+        <div id="gotop"></div>
     </section>
 
     <template>
@@ -38,7 +38,7 @@ get_header(); ?>
                 <p class="price"></p>
                 <button class="seMore">See more</button>
             </div>
-			<hr class="solidred">
+            <hr class="solidred">
         </article>
     </template>
 
