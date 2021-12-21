@@ -69,7 +69,7 @@ async function hentData() {
 function visBoxes() {
     console.log(boxes);
 
-    //for each loop looper igennem alle kurserne i json
+    //for each loop looper igennem alle boxene i json
     boxes.forEach(box => {
 
 

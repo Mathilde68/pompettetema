@@ -70,7 +70,7 @@ async function hentData() {
 function visWine() {
     console.log(wines);
 
-    //for each loop looper igennem alle kurserne i json
+    //for each loop looper igennem alle vinene i json
     wines.forEach(wine => {
 
 

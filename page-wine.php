@@ -111,37 +111,37 @@ function filtrerMenu() {
 
     //if statements vælger den rigtige knap og fjerner den pågældende select class
     document.querySelector(".allSelect").classList.remove('allSelect');
-} else if (filter == "Red Wine") {
+    } else if (filter == "Red Wine") {
     document.querySelector(".redSelect").classList.remove('redSelect');
-} else if (filter == "White Wine") {
+    } else if (filter == "White Wine") {
     document.querySelector(".whiteSelect").classList.remove('whiteSelect');
-} else if (filter == "Rosé Wine") {
+    } else if (filter == "Rosé Wine") {
     document.querySelector(".roseSelect").classList.remove('roseSelect');
-} else if (filter == "Sparkling Wine") {
+    } else if (filter == "Sparkling Wine") {
     document.querySelector(".bubblesSelect").classList.remove('bubblesSelect');
-} else if (filter == "Orange Wine") {
+    } else if (filter == "Orange Wine") {
     document.querySelector(".orangeSelect").classList.remove('orangeSelect');
-}
-//herefter tilføjes den valgt class til den knap der førte ind i funktionen
-this.classList.add(selectclass);
+    }
+    //herefter tilføjes den valgt class til den knap der førte ind i funktionen
+    this.classList.add(selectclass);
 
-//sætter filters værdi lig med værdien fra data af den knap der førte ind i funktionen
-filter = this.dataset.kategori;
+    //sætter filters værdi lig med værdien fra data af den knap der førte ind i funktionen
+    filter = this.dataset.kategori;
 
-//kalder function visVine efter det nye filter er sat
-visVine();
+    //kalder function visVine efter det nye filter er sat
+    visVine();
 
-//scroller ned til loopview efter tryk
-document.querySelector(".loopview").scrollIntoView({
+    //scroller ned til loopview efter tryk
+    document.querySelector(".loopview").scrollIntoView({
     behavior: 'smooth'
-});
+    });
 }
 
 function visVine() {
     console.log(wines);
     // rydder indholdet af sektionen så der er plads til KUN det nye indhold (efter filtrering)
     destination.textContent = "";
-    //for each loop looper igennem alle kurserne i json
+    //for each loop looper igennem alle vinene i json
     wines.forEach(wine => {
         if (filter == wine.winetype || filter == "all") {
 
